@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations for {{ input_book }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Books similar to "{{ input_book }}"</h1>
+        <ul>
+            {% for book in books %}
+            <li>{{ book }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Search Again</a>
+    </div>
+</body>
+
+</html>
